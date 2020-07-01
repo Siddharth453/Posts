@@ -16,8 +16,7 @@
     You Can also add a comment to a perticular post on clicking the button "Leave a Review!"
   </p>
   <hr>
-  <h6>Thanks.<br>
-  Siddharth Kumar
-</h6>
+  <h6>Thanks.</h6>
+  <h5>Siddharth Kumar</h5>
   <p align="right" style="float: left; font-family: arial;">Version: 1.2.0</p>
   
