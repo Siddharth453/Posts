@@ -17,4 +17,5 @@
   </p>
   <hr>
   <h6>Thanks.</h6>
+  <p align="right" style="float: left;">Version: 1.2.0</p>
   
