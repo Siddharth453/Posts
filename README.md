@@ -9,7 +9,7 @@
   <p>
     
     
-    Tips: First Sign Up for a Free Account..
+    Guides: First Sign Up for a Free Account..
     Then after logging in click on the button "Add New Post!" and then 
     fill up all the input fields and there you go! You have Created your First Post!!
     You Can Edit or Delete the Post if you want but don't worry no body can remove your post either than me..
