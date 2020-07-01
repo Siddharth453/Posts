@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Edit Post</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/css?family=Lemon&display=swap" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	</head>
+	<body>
+	    <style>
+			body{
+				font-family:'Lemon',cursive;
+				background-color:#ffffff;
+			}
+			.container{
+				width:350px;
+				border-radius:5px;
+			}
+			#block1{
+				height:50px;
+			}
+			#resize{
+				width:auto;
+			}
+		</style>
+<nav class="navbar navbar-default navbar-expand-md navbar-light bg-light">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/"  style="font-family:'Lemon',cursive;"><i class="home icon"></i>Home </a>
+				<a class="navbar-brand" href="/posts"  style="font-family:'Lemon',cursive;"><i class="envelope icon"></i>Posts </a>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+			<div class="collapse navbar-collapse"id="navbarSupportedContent">
+				<ul class="nav navbar-nav navbar-right mr-auto">
+				<%if(!currentUser){%>
+					   <li><a href="/login" style="font-family:'Lemon',cursive;">Login</a></li>
+					   <li><a href="/register" style="font-family:'Lemon',cursive;">Sign Up</a></li>
+				<%}else{%>
+					<li><a style="font-family:'Lemon',cursive;">Signed in as <%=currentUser.username%></a></li>
+					   <li><a href="/logout" style="font-family:'Lemon',cursive;">Logout</a></li>
+				<%}%>
+				</ul>
+			</div>
+		</div>
+	</nav>
+		<hr>
+   <div class="ui main text container segment" align="center">
+		<form action="/posts/<%=posts._id%>?_method=PUT" method="POST" align="center" class="ui form">
+		<h3 align="center"  style="font-family:'Lemon',cursive;">Edit <%=posts.name%></h3><br>
+		<div class="field">
+			<label style="font-family:'Lemon',cursive;">Post Title:
+			<input type = "text" class="form-control" id="block" name="postname" id="empty" placeholder = "Name" autocomplete="off" required style="font-family:'Lemon',cursive;" value="<%=posts.name%>">
+			</label>
+		</div>
+		<div class="field">
+			<label style="font-family:'Lemon',cursive;">Create A Link for the Post:
+				<input type = "url" class="form-control" id="block" name="postlink" id="empty" placeholder = "Enter Link" autocomplete="off" style="font-family:'Lemon',cursive;" value="<%=posts.link%>">
+			</label>
+		</div>
+		<div class="field">
+			<label style="font-family:'Lemon',cursive;">Description:
+		    <textarea class="form-control" id="block" name="description" id="empty" placeholder = "Description.." autocomplete="off" required style="font-family:'Lemon',cursive;"><%=posts.description%>
+			</textarea></label>
+		</div>
+			<div align="left">
+			<button align="left" style="font-family:'Lemon',cursive;" class="ui violet big basic button" id="block1">
+				Update Your Post!
+			</button>
+			</div>
+		</form>
+	</div>
+		<hr>
+	</body>
+</html>

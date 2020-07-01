@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Welcome!</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/css?family=Lemon&display=swap" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	</head>
+	<body>
+		<style>
+			body{
+				font-family:'Lemon',cursive;
+			}
+			.style{
+                 float: none;
+                 color: black;
+                 padding: 16px;
+                 text-decoration: none;
+                 display: block;
+                 text-align: left;
+			}
+		</style>
+		<nav class="navbar navbar-default navbar-expand-md navbar-light bg-light">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/"  style="font-family:'Lemon',cursive;"><i class="home icon"></i>Home </a>
+				<a class="navbar-brand" href="/posts/new"  style="font-family:'Lemon',cursive;"><i class="paper plane icon"></i>New  Post </a>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+			<div class="collapse navbar-collapse"id="navbarSupportedContent">
+				<ul class="nav navbar-nav navbar-right mr-auto">
+				<%if(!currentUser){%>
+					   <li><a href="/login" style="font-family:'Lemon',cursive;">Login</a></li>
+					   <li><a href="/register" style="font-family:'Lemon',cursive;">Sign Up</a></li>
+				<%}else{%>
+					<li><a style="font-family:'Lemon',cursive;">Signed in as <%=currentUser.username%></a></li>
+					   <li><a href="/logout" style="font-family:'Lemon',cursive;">Logout</a></li>
+				<%}%>
+				</ul>
+			</div>
+		</div>
+	</nav>
+     <div class="jumbotron">
+        <h1 align="center" style="font-family:'Lemon',cursive;">
+			WELCOME!!
+		 </h1>
+
+		 <div align="center" style="font-family:'Lemon',cursive;">
+			It's the home page of posts..
+		 </div>
+		 <div align="center">
+		    <a class="btn btn-primary btn-lg" href="/posts" align="center"><i class="envelope icon"></i>Go to posts page</a>
+		 </div>
+	  </div>
+		<hr>
+	</body>
+</html>

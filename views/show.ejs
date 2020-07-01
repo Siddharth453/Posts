@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>More Info</title>
+				<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+            <link href="https://fonts.googleapis.com/css?family=Lemon&display=swap" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	</head>
+	<body>
+	    <style>
+			body{
+				font-family:'Lemon',cursive;
+				background-color:#ffffff;
+			}
+			#removeinline{
+				display:inline;
+			}
+			.container.hide{
+				display: none;
+			}
+			#widthadjust{
+				width: 100px;
+			}
+		</style>
+<nav class="navbar navbar-default navbar-expand-md navbar-light bg-light">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/"  style="font-family:'Lemon',cursive;"><i class="home icon"></i>Home </a>
+				<a class="navbar-brand" href="/posts"  style="font-family:'Lemon',cursive;"><i class="envelope icon"></i>Posts </a>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+			<div class="collapse navbar-collapse"id="navbarSupportedContent">
+				<ul class="nav navbar-nav navbar-right mr-auto">
+				<%if(!currentUser){%>
+					   <li><a href="/login" style="font-family:'Lemon',cursive;">Login</a></li>
+					   <li><a href="/register" style="font-family:'Lemon',cursive;">Sign Up</a></li>
+				<%}else{%>
+					<li><a style="font-family:'Lemon',cursive;">Signed in as <%=currentUser.username%></a></li>
+					   <li><a href="/logout" style="font-family:'Lemon',cursive;">Logout</a></li>
+				<%}%>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container" id="alert">
+		<%if(message && message.length > 0){%>
+	       <div class="alert alert-danger" role="alert" style="font-family:'Lemon',cursive;"><%=message%></div>
+		<%}%>
+		<%if(message1 && message1.length > 0){%>
+	       <div class="alert alert-danger" role="alert" style="font-family:'Lemon',cursive;"><%=message1%></div>
+		<%}%>
+	</div>
+	<div class="jumbotron">
+        <h3 align="center" style="font-family:'Lemon',cursive;">
+			More Information of Posts.
+		</h3>
+		<div align="center">
+			<a href="/posts" class="btn btn-primary">Go Back</a>
+		</div><br>
+	</div>
+		<hr>
+		<div class="container">
+		<div class="ui main text container segment">
+			<h1 align="center"  style="font-family:'Lemon',cursive; font-size:20px;"><a href="<%=posts.link%>" style="text-decoration:none; color:black;"><%=posts.name%></a></h1>
+		        <hr>
+		<div class="ui top attached">
+			<div class="item">
+				<p style="font-family:'Lemon',cursive; font-size:15px;">
+					Description: <underline style="text-decoration:underline;"><%=posts.description%></underline><br>
+				</p><hr>
+				<p style="font-family:'Lemon',cursive; font-size:15px;">
+					Date Created: <span style="font-family:'Lemon',cursive;"><strong><%- posts.created.toDateString() %> on <%=posts.created.getHours()%>:<%=posts.created.getMinutes()%>:<%=posts.created.getSeconds()%></strong>.</span><br>
+					<span style="color:#a1a1a1; font-size:14px;"><em> Submitted by "<%=posts.author.username%>".</em></span>
+				</p>
+			</div>
+		<%if(currentUser && posts.author.id.equals(currentUser._id)){%>
+		    <hr>
+		    <a class="ui yellow huge basic button" style="font-family:'Lemon',cursive; font-size:15px;" href="<%=posts._id%>/edit">Edit Post!</a>
+		    <form action="<%=posts._id%>?_method=DELETE" method="POST" id="removeinline">
+				    <button class = "ui red big basic button" style="font-family:'Lemon',cursive; font-size:15px;">
+					    Remove Post!
+				    </button>	
+			    </form>
+		<%}%>
+		</div>
+		</div>
+		<div class="container">
+		  <div class="well" id="review well">
+		    <div class="text-right">
+		        <a href="<%=posts._id%>/comments/new"><button style="font-family:'Lemon',cursive; font-size:15px;" class="btn btn-success btn-lg">
+			        Leave a Review!
+				</button></a>
+			  </div>
+				<hr><br>
+			    <%posts.comments.forEach(function(comment){%>
+			      <div>
+		             <p>
+						 <b><%=comment.author.username%></b><br>
+						<%=comment.text%>
+                    </p>
+					<%if(currentUser && comment.author.id.equals(currentUser._id)){%>
+			          <a id="widthadjust" class="btn btn-sm btn-warning" 
+					href="/posts/<%=posts._id%>/comments/<%=comment._id%>/edit">Edit</a>
+					  <form style="display: inline;" action="/posts/<%=posts._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">               
+					    <button style="font-family:'Lemon',cursive;"  class="btn btn-sm btn-danger" id="widthadjust">
+						   Remove
+						</button>
+					  </form>
+					  <%}%>
+			         <hr>
+			      </div>
+		        <%})%>
+		
+		  </div>
+		</div>
+	 </div>
+		<hr>
+		<script>
+			var hide = setTimeout(function(){document.getElementById('alert').classList.add("hide");}, 8000);
+		</script>
+	</body>
+</html>

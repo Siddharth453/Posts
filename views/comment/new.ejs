@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Add Your Comment</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+            <link href="https://fonts.googleapis.com/css?family=Lemon&display=swap" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        
+	</head>
+	<body>
+	    <style>
+			body{
+				font-family:'Lemon',cursive;
+				background-color:#ffffff;
+			}
+			.container{
+				width:350px auto;
+				border-radius:5px;
+			}
+			#block{
+				width:300px;
+				height:43px;
+			}
+			#block1{
+				height:50px;
+				margin-bottom:10px;
+			}
+		</style>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/"> Home </a>
+				<a class="navbar-brand" href="/posts"> Posts </a>
+			</div>
+		</div>
+	</nav>
+
+		<form action="/posts/<%=posts._id%>/comments/" method="POST" align="center">
+			<hr>
+		<div class="container">
+		<h3 align="center">Add your comment to post <%=posts.name%></h3><br>
+			<label>Comment:
+				<input type = "text" class="form-control" id="block" name="comment" placeholder = "Type your comment here.." autocomplete="off" required>
+			</label>
+			<label>Author:
+				<input type = "text" class="form-control" id="block" name="author" placeholder = "Author.." autocomplete="off" required>
+			</label>
+			<button class="btn btn-primary btn-lg" id="block1">
+				Submit Your Comment!
+			</button>
+			</div>
+		</form>
+		<hr>
+	</body>
+</html>

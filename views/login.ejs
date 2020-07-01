@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Lemon&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	</head>
+	<body>
+	<nav class="navbar navbar-default navbar-expand-md navbar-light bg-light">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/"  style="font-family:'Lemon',cursive;"><i class="home icon"></i>Home </a>
+				<a class="navbar-brand" href="/posts"  style="font-family:'Lemon',cursive;"><i class="envelope icon"></i>Posts </a>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+			<div class="collapse navbar-collapse"id="navbarSupportedContent">
+				<ul class="nav navbar-nav navbar-right mr-auto">
+				<%if(!currentUser){%>
+					   <li><a href="/login" style="font-family:'Lemon',cursive;">Login</a></li>
+					   <li><a href="/register" style="font-family:'Lemon',cursive;">Sign Up</a></li>
+				<%}else{%>
+					<li><a style="font-family:'Lemon',cursive;">Signed in as <%=currentUser.username%></a></li>
+					   <li><a href="/logout" style="font-family:'Lemon',cursive;">Logout</a></li>
+				<%}%>
+				</ul>
+			</div>
+		</div>
+	</nav>
+    <div class="container" id="alert">
+		<%if(message && message.length > 0){%>
+	     <div class="alert alert-danger" role="alert" style="font-family:'Lemon',cursive;"><%=message%></div>
+		<%}%>
+	</div>
+	<hr>
+	<div class="ui main text container segment">
+		<form action="/login" method="POST" align="center" class="ui form">
+           <h3 style="font-family:'Lemon', cursive;">
+			   Login
+			</h3><br>
+			<div class="field" style="font-family:'Lemon', cursive;">
+				<label>Username:
+					<input style="font-family:'Lemon',cursive;" type="text" placeholder="Username.." name="username" autocomplete="off">
+				</label>
+			</div>
+			<div class="field" style="font-family:'Lemon', cursive;">
+				<label>Password:
+					<input style="font-family:'Lemon', cursive;" type="password" id="password" name="password" placeholder="Password..">
+				</label>
+			</div>
+			<div align="left">
+				<button style="font-family:'Lemon', cursive;" class="ui violet big basic button">
+					Login!
+				</button>
+				<div style="font-family:'Lemon', cursive;">
+				    <input type="checkbox" onclick="toggle()" style="font-family:'Lemon', cursive;">
+					<label>Show Password</label>
+				</div>
+			</div><hr>
+			<a href="/register" style="font-family:'Lemon', cursive;">Don't Have An Account Yet? Sign Up</a>
+		</form>
+	</div>
+	<hr>
+	<script>
+		function toggle() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+              x.type = "text";
+            } else {
+              x.type = "password";
+            }
+     }
+	</script>
+	</body>
+</html>
