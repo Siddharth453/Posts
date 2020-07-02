@@ -6,8 +6,7 @@
     Just Click on the URL Below and Sign Up for a Free Account Today!<br>
     <a href="https://postapp2.herokuapp.com/register" target="new">Let's Go!!</a>
   </p><br><br>
-    <h3>Guides: </h3>
-    <hr>
+    <h2>Guides: </h2>
   <p>
     <li>First Sign Up for a Free Account..</li>
     <li>Then after logging in click on the button "Add New Post!" and then</li> 
