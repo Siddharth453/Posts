@@ -6,9 +6,9 @@
     Just Click on the URL Below and Sign Up for a Free Account Today!<br>
     <a href="https://postapp2.herokuapp.com/register" target="new">Let's Go!!</a>
   </p><br><br>
-  <p>
-    Guides: 
+    <h3>Guides: <h4>
     <hr>
+  <p>
     <li>First Sign Up for a Free Account..</li>
     <li>Then after logging in click on the button "Add New Post!" and then</li> 
     <li>fill up all the input fields and there you go! You have Created your First Post!!</li>
