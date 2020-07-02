@@ -18,7 +18,7 @@
   <h2>Features: </h2>
   <p>
      <li>You Should be Authenticated.</li>
-     <li>Secured.</li>
+     <li>Secured. Authorized.</li>
      <li>You Can Edit or Delete Your Post whenever you want.</li>
      <li>Nobody can edit or remove anybody's post if he/she does not owns it.</li>
      <li>You Can Comment to a Particular Post.</li>
