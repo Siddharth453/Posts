@@ -7,14 +7,14 @@
     <a href="https://postapp2.herokuapp.com/register" target="new">Let's Go!!</a>
   </p><br><br>
   <p>
-    
-    
-    Guides: First Sign Up for a Free Account..
-    Then after logging in click on the button "Add New Post!" and then 
-    fill up all the input fields and there you go! You have Created your First Post!!
-    You Can Edit or Delete the Post if you want but don't worry no body can remove your post..
-    You Can also add a comment to a particular post on clicking the button "Leave a Review!".
-    Good Luck For Your First Tries!👍👍
+    Guides: 
+    <hr>
+    <li>First Sign Up for a Free Account..</li>
+    <li>Then after logging in click on the button "Add New Post!" and then</li> 
+    <li>fill up all the input fields and there you go! You have Created your First Post!!</li>
+    <li>You Can Edit or Delete the Post if you want but don't worry no body can remove your post..</li>
+    <li>You Can also add a comment to a particular post on clicking the button "Leave a Review!".</li>
+    <li>Good Luck For Your First Tries!👍👍</li>
   </p>
   <hr>
   <h6>Thanks.</h6>
