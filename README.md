@@ -17,6 +17,7 @@
   </p>
   <h2>Features: </h2>
   <p>
+     <li>You can chat with the website's owner or the website's agents.</li>
      <li>You Should be Authenticated.</li>
      <li>Secured. Authorized.</li>
      <li>You Can Edit or Delete Your Post whenever you want.</li>
