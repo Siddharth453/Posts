@@ -29,5 +29,5 @@
    <hr>
   <h6>Thanks.</h6>
   <h5 style="text-decoration: underline;">Siddharth Kumar</h5>
-  <p align="right" style="font-family: arial;">Version: 1.2.0(Stabled)</p>
+  <p align="right" style="font-family: arial;">Version: 1.2.1(Stabled)</p>
   
