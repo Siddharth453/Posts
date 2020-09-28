@@ -1,6 +1,6 @@
 <h1>Let's Chat, Posts is There..</h1>
   <p>This is our all new Chatting app Posts, Stable released on 9/6/2020!!<br><br>
-    This Posts app is Very Interesting and the best app for chatting together<b>*</b>, Styled, Secured 
+    This is our all new Posts app for chatting<b>*</b>, Styled, Secured 
     and has almost all the features a chat app has...
     Come here and chat together in this website called Posts.
     Just Click on the URL Below and Sign Up for a Free Account Today!<br>
