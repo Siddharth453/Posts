@@ -17,6 +17,7 @@
   </p>
   <h2>🎁Features: </h2>
   <p>
+     <li>You can chat with your friends easily through Posts Chat a new app for live chatting!</li>
      <li>You can chat with the website's owner or the website's agents.</li>
      <li>You Should be Authenticated.</li>
      <li>Secured. Authorized.</li>
@@ -25,7 +26,7 @@
      <li>You Can Comment to a Particular Post.</li>
      <li>You Can Edit or Remove your Comment whenever you want.</li>
      <li>Nobody can edit or remove anybody's comment if he/she does not owns it.</li>
-     <li>Anybody can see a users profile(not username or password only public views like Name, Profile Photo and email address).</li>
+     <li>Anybody can see a user's profile(not username or password only public views like Name, Profile Photo and email address).</li>
   </p>
    <hr>
   <h6>Thanks.</h6>
