@@ -1,4 +1,4 @@
-<h1>Let's Chat, Posts is There..</h1>
+<h1>Let's Chat, Posts is There!</h1>
   <p>This is our all new Chatting app, "Posts" released on 9/6/2020!!<br><br>
     This is our all new Posts app for chatting, Styled, Secured 
     and has almost all the features a chat app has...
