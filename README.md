@@ -11,7 +11,7 @@
     <li>First Sign Up for a Free Account..</li>
     <li>Then after logging in click on the button "Add New Post!" and then</li> 
     fill up all the input fields and there you go! You have Created your First Post!!
-    <li>You Can Edit or Delete the Post if you want but don't worry no body can remove your post..</li>
+    <li>You Can Edit or Delete the Post if you want but don't worry no body can remove your post.</li>
     <li>You Can also add a comment to a particular post on clicking the button "Leave a Review!".</li>
     <li>Good Luck For Your First Tries!👍👍</li>
   </p>
