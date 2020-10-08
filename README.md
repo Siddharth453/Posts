@@ -28,6 +28,8 @@
      <li>Nobody can edit or remove anybody's comment if he/she does not owns it.</li>
      <li>Anybody can see a user's profile(not username or password only public views like Name, Profile Photo and email address).</li>
   </p>
+  <h2>📈Status: </h2>
+  <p>Offline for Offline for maintenance.<p>
    <hr>
   <h6>Thanks.</h6>
   <h5 style="text-decoration: underline;">Siddharth Kumar</h5>
