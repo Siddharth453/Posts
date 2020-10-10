@@ -29,7 +29,7 @@
      <li>Anybody can see a user's profile(not username or password only public views like Name, Profile Photo and email address).</li>
   </p>
   <h2>📈Status: </h2>
-  <p>Offline for maintenance.<p>
+  <p>Working.<p>
    <hr>
   <h6>Thanks.</h6>
   <h5 style="text-decoration: underline;">Siddharth Kumar</h5>
